@@ -17,5 +17,5 @@ int main(int argc, char *argv[])
 	if (nice < -20 || nice > 19)
 		return 255;
 
-	return setpriority(pid, PRIO_PROCESS, nice);
+	return setpriority(PRIO_PROCESS, pid, nice);
 }
