@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 		return 1;
 
 	sscanf(argv[2], "%i", &pid);
-	if (!pid || !kill(pid, 0))
+	if (!pid || kill(pid, 0))
 		return 127;
 
 	sscanf(argv[1], "%i", &nice);
